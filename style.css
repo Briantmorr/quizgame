@@ -12,5 +12,14 @@ header {
 
 main {
     text-align: center;
-    font-size: 40%;
+    font-size: 30px;
 }
+
+/* input {
+    display: block;
+    text-align: center;
+} */
+
+/* label {
+    display: block;
+} */
