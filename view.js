@@ -4,11 +4,12 @@ class View {
 
     constructor(gameController) {
         this.gameController = gameController;
+        this.questionArray = gameController.getQuestions();
     }
 
     renderAllQuestions() {
-        for (var i = 0; i < questionArray.length; i++) {
-            this.renderEachQuestion(questionArray[i], i);
+        for (var i = 0; i < this.questionArray.length; i++) {
+            this.renderEachQuestion(this.questionArray[i], i);
         }
     }
     renderEachQuestion(question, i) {
