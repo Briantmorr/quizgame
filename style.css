@@ -14,7 +14,12 @@ main {
     text-align: center;
     font-size: 30px;
 }
-
+/* .questions{
+    border: 1px solid black;
+}
+.questions p{
+   color: blue;
+} */
 /* input {
     display: block;
     text-align: center;
