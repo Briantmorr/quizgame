@@ -19,7 +19,10 @@ class View {
     }
 
     renderEachQuestion(question, index) {
-        var qDiv = $('<div>');
+        var qDiv = $('<div>', {
+            'class': `questions ${index}`,
+            id: index
+        });
         var qQuestion = $('<p>', {
             text: `${index + 1}) ${question.question}`
         });
@@ -32,6 +35,7 @@ class View {
                 });
                 var qChoice = $('<input>', {
                     type: 'radio',
+                    'class': 'radiobutton',
                     value: question.choices[i],
                     name: index
                 });
