@@ -1,7 +1,9 @@
 // render questions into view.html
 var gameView = null;
 var gameController = null;
-$(document).ready(initializeApp){
+$(document).ready(initializeApp);
+
+function initializeApp(){
     gameController = new Controller();
     gameView = new View();
     
