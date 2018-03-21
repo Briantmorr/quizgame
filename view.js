@@ -26,18 +26,18 @@ class View {
             text: `${index + 1}) ${question.question}`
         });
         if (question.type === 'multiple') {
-            var label = $('<label>',{
-                for: index,
-                text: question.choices[i]
-            });
             var qChoices = $('<div>');
             for (var i = 0; i < question.choices.length; i++) {
+                var label = $('<label>',{
+                    for: index,
+                    text: question.choices[i]
+                });
                 var qChoice = $('<input>', {
                     type: 'radio',
                     value: question.choices[i],
                     name: index
                 });
-                qChoices.append(qChoice);
+                qChoices.append(label, qChoice);
             }
         }
         else {
@@ -53,7 +53,7 @@ class View {
             });
             var label1 = $('<label>',{
                 for: index,
-                text: 'fasle'
+                text: 'false'
             });
             var qChoice1 = $('<input>', {
                 type: 'radio',
