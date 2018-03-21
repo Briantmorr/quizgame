@@ -4,7 +4,8 @@ class View {
 
     constructor(gameController) {
         this.gameController = gameController;
-        this.questionArray = gameController.getQuestions();
+        this.questionArray = this.gameController.getQuestions();
+        this.renderAllQuestions();
     }
 
     renderAllQuestions() {

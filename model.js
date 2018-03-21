@@ -62,6 +62,6 @@ class Model{
     }
 
     getQuestions(){
-        return this.questionArray();
+        return this.questionArray;
     }
 }
