@@ -1,9 +1,10 @@
-var gameView = null;
-var gameController = null;
+
 $(document).ready(initializeApp);
 
 function initializeApp(){
-    gameController = new Controller();
-    gameView = new View(gameController);
+    var gameModel = new Model();
+    var gameController = new Controller();
+    gameController.setQuestions(gameModel.getQuestions());
+    var gameView = new View(gameController);
     
 }
