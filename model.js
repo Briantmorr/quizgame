@@ -27,13 +27,13 @@ var questionArray = [
     },
     {
         id: 5, 
-        question: "cattle have four stomachs to digest grass.",
+        question: "a donkey is an ass",
         type:'true/false',
         answer:'true'
     },
     {
         id: 6, 
-        question: "cattle have four stomachs to digest grass.",
+        question: "dalmatians are born without spots.",
         type:'true/false',
         answer:'true'
     },
