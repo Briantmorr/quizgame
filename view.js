@@ -19,9 +19,7 @@ class View {
     }
 
     renderEachQuestion(question, index) {
-        var qDiv = $('<div>', {
-            id: index
-        });
+        var qDiv = $('<div>');
         var qQuestion = $('<p>', {
             text: `${index + 1}) ${question.question}`
         });
@@ -74,7 +72,7 @@ class View {
         var questions = this.gameController.getQuestions();
 
         for (let x = 0; x < questions.length; x++) {
-            var radios = document.getElementsById(questions[x].id);
+            var radios = document.getElementsByName(questions[x].id);
 
             for (let i = 0; i < radios.length; i++) {
                 if (radios[i].checked) {
