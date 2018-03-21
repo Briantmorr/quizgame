@@ -18,13 +18,13 @@ class Controller {
 
     addQuestion(question){
         this.questions.push(question);
-        this.answers[question.number] =  question.answer;        
+        this.answers[question.id] =  question.answer;        
     }
 
     checkAnswers(userAnswers){
         var countCorrectAnswers = 0;
         for(let i = 0; i < userAnswers.length; i++){
-            if(userAnswers[i].answer === this.answers[userAnswers[i].number]){
+            if(userAnswers[i].answer === this.answers[userAnswers[i].id]){
                 countCorrectAnswers++;
             }
         }
