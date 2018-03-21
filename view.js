@@ -3,43 +3,61 @@
 class View {
 
     constructor(gameController) {
+        console.log('controller ques:, ', gameController);
         this.gameController = gameController;
-        this.questionArray = gameController.getQuestions();
+        this.questionArray = this.gameController.getQuestions();
+        console.log('in here', this.questionArray);
+        this.renderAllQuestions();
     }
-
     renderAllQuestions() {
+        console.log('in render');
         for (var i = 0; i < this.questionArray.length; i++) {
             this.renderEachQuestion(this.questionArray[i], i);
         }
     }
-    renderEachQuestion(question, i) {
+    renderEachQuestion(question, index) {
         var qDiv = $('<div>', {
-            id: i
+            id: index
         });
         var qQuestion = $('<p>', {
-            text: `${i}) ${question.question}`
+            text: `${index + 1}) ${question.question}`
         });
         if (question.type === 'multiple') {
             var qChoices = $('<div>');
             for (var i = 0; i < question.choices.length; i++) {
+                var label = $('<label>',{
+                    for: index,
+                    text: question.choices[i]
+                });
                 var qChoice = $('<input>', {
                     type: 'radio',
-                    value: question.choices[i]
+                    value: question.choices[i],
+                    name: index
                 });
-                qChoices.append(qChoice);
+                qChoices.append(label, qChoice);
             }
         }
         else {
+            var label = $('<label>',{
+                for: index,
+                text: 'true'
+            });
             var qChoices = $('<div>');
             var qChoice = $('<input>', {
                 type: 'radio',
-                value: 'true'
+                value: 'true',
+                name: index
+            });
+            var label1 = $('<label>',{
+                for: index,
+                text: 'false'
             });
             var qChoice1 = $('<input>', {
                 type: 'radio',
-                value: 'false'
+                value: 'false',
+                name: index
             });
-            qChoices.append(qChoice, qChoice1);
+            qChoices.append(label, qChoice, label1, qChoice1);
         }
         qDiv.append(qQuestion, qChoices);
         console.log('qDiv is: ', qDiv);
