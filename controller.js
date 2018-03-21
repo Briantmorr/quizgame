@@ -7,13 +7,14 @@ class Controller {
     }
 
     getQuestions(){
-        this.questions;
+        return this.questions;
     }
 
-    setQuestions(questions){        
-        for(let i =0; i < questions;i++){
-            addQuestion(questions[i]);
-        }        
+    setQuestions(questions){  
+        for(let i =0; i < questions.length;i++){
+            this.addQuestion(questions[i]);
+        }     
+          
     }
 
     addQuestion(question){
