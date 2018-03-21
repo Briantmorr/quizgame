@@ -8,13 +8,16 @@ class View {
         this.questionArray = this.gameController.getQuestions();
         console.log('in here', this.questionArray);
         this.renderAllQuestions();
+        $('#submit').click(this.createAnswersObjectFromDOMElements.bind(this));
     }
+
     renderAllQuestions() {
         console.log('in render');
         for (var i = 0; i < this.questionArray.length; i++) {
             this.renderEachQuestion(this.questionArray[i], i);
         }
     }
+
     renderEachQuestion(question, index) {
         var qDiv = $('<div>', {
             id: index
