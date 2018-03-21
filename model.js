@@ -39,14 +39,20 @@ var questionArray = [
     },
     {
         id: 7, 
-        question: "cattle have four stomachs to digest grass.",
-        type:'true/false',
-        answer:'true'
+        question: "which animal has the longest lifespan?",
+        type:'multiple',
+        choices: [
+            'Elephant', 'locust', 'blue whale', 'giant tortoise'
+        ],
+        answer: 'giant tortoise'
     },
     {
         id: 8, 
-        question: "cattle have four stomachs to digest grass.",
-        type:'true/false',
-        answer:'true'
+        question: "Which of the following animals sleep standing up?",
+        type:'multiple',
+        choices: [
+            'Gorillas', 'Flamingos', 'Camels', 'Ravens'
+        ],
+        answer: 'Flamingos'
     },
 ];
