@@ -28,6 +28,7 @@ class Controller {
                 countCorrectAnswers++;
             }
         }
+        return this.calculatePercentage(countCorrectAnswers);
     }
 
     calculatePercentage(countCorrectAnswers){

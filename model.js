@@ -1,5 +1,6 @@
 //start with an array of 8 questions that are true/false or multiple choice
 
+<<<<<<< HEAD
 var questionArray = [
     {
         id: 1, 
@@ -56,3 +57,70 @@ var questionArray = [
         answer: 'Flamingos'
     },
 ];
+=======
+class Model{
+    
+    constructor(){
+        this.questionArray = [
+            {
+                id: 1, 
+                question: "cattle have four stomachs to digest grass.",
+                type:'true/false',
+                answer:'true'
+            },
+            {
+                id: 2, 
+                question: "an ostrich's eye is bigger than its brain",
+                type:'true/false',
+                answer:'true'
+            },
+            {
+                id: 3, 
+                question: "an ant can live to be 29 years old",
+                type:'true/false',
+                answer:'true'
+            },
+            {
+                id: 4, 
+                question: "a mole can dig a tunnel 500 feet long in just one night",
+                type:'true/false',
+                answer:'false'
+            },
+            {
+                id: 5, 
+                question: "cattle have four stomachs to digest grass.",
+                type:'true/false',
+                answer:'true'
+            },
+            {
+                id: 6, 
+                question: "cattle have four stomachs to digest grass.",
+                type:'true/false',
+                answer:'true'
+            },
+            {
+                id: 7, 
+                question: "which animal has the longest lifespan?",
+                type:'multiple',
+                choices: [
+                    'Elephant', 'locust', 'blue whale', 'giant tortoise'
+                ],
+                answer: 'giant tortoise'
+            },
+            {
+                id: 8, 
+                question: "Which of the following animals sleep standing up?",
+                type:'multiple',
+                choices: [
+                    'Gorillas', 'Flamingos', 'Camels', 'Ravens'
+                ],
+                answer: 'Flamingos'
+            },
+        ];
+    }
+
+    getQuestions(){
+        return this.questionArray();
+    }
+}
+>>>>>>> 1c9a2e306398d788a6ee0cafe2198d5e5a24ea4a
